@@ -7,7 +7,7 @@
     <script src="includes/js/jquery.min.js" charset="utf-8"></script>
     <script src="js.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body onload="tabla()">
 
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -34,16 +34,19 @@
     </div>
   </nav>
 
-<div class="alert alert-success" id="div_exito" style="display:none">
-</div>
-<div class="alert alert-warning" id="div_error" style="display:none">
-</div>
-<input type="text" id="txtNombre" class="form-control" value="" placeholder="Nombre">
-<input type="number" id="txtImporte" class="form-control" value="">
-<input type="date" id="txtFecha" class="form-control" value="">
-
-
-<button type="button" id="btnSave" class="btn btn-default">Ok</button>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="well well-sm">
+            <tr>
+                <th>Nombre</th>
+                <th>Importe</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody id="tabla">
+        </tbody>
+      </table>
+    </div>
 
   </body>
 </html>

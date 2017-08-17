@@ -27,6 +27,25 @@ function dbInsert(){
         }
   });
 
-
   return false;
 }
+
+
+function tabla(){
+
+        $.ajax({
+            type:'POST',
+            url:'tabla.php',
+            data: {"xxx":"xxx"},
+            dataType:'json',
+            beforeSend:function(){
+            },
+            success:function(data){
+                var array = eval(data);
+                $("#tabla").html(array["contenido"]);
+            },
+            complete:function(){
+            }
+        });
+        return false;
+    }
