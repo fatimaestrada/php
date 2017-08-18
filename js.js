@@ -1,4 +1,10 @@
-$(document).on('click','#btnSave',function(){dbInsert();})
+$(document).on('click','#btnSave',function(){dbInsert();});
+$(document).on('click','#btnDel',function(){
+    if (!confirm("Si elimina este item no se recupera")) {
+        return false;
+    }
+    delet($(this).attr("param"));
+});
 
 function dbInsert(){
   var txtNombre = $("#txtNombre").val();
@@ -38,14 +44,24 @@ function tabla(){
             url:'tabla.php',
             data: {"xxx":"xxx"},
             dataType:'json',
-            beforeSend:function(){
-            },
             success:function(data){
                 var array = eval(data);
                 $("#tabla").html(array["contenido"]);
-            },
-            complete:function(){
             }
+        });
+        return false;
+    }
+
+function delet(aEliminar){
+
+        $.ajax({
+            type:'POST',
+            url:'eliminar/eliminar.php',
+            data: {"aEliminar":aEliminar},
+            dataType:'json',
+            success:function(data){
+                tabla();
+            },
         });
         return false;
     }

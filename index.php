@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://bootswatch.com/solar/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Test</title>
     <script src="includes/js/jquery.min.js" charset="utf-8"></script>
     <script src="js.js" charset="utf-8"></script>
@@ -43,7 +44,7 @@
 <input type="date" id="txtFecha" class="form-control" value="">
 
 
-<button type="button" id="btnSave" class="btn btn-default">Ok</button>
+<button type="button" id="aEliminar" class="btn btn-default">Ok</button>
 
   </body>
 </html>

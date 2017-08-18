@@ -15,6 +15,7 @@ include "includes/codigo/conexion.php";
                                 <td>".$registro["nombre"]."</td>
                                 <td>".$registro["importe"]."</td>
                                 <td>".$registro["dob"]."</td>
+                                <td><i type='button' id='btnDel' param='".base64_encode($registro["id"])."' class='fa fa-trash'></i></td>
                             </tr>";
             }
         }
